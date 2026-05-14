@@ -2,6 +2,7 @@
 
 > *"In 2026 the moat isn't 'I know how to prompt'. It's 'I know how AI breaks — and I have a system to catch it before production does.'"*
 
+**Series:** Vibe Coding Mastery — Mindset Foundations (Session 2 of 5)
 **Status:** ⏳ In production
 **Runtime:** 30 minutes (target)
 **Cost:** Free — like every session in this series

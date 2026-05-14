@@ -34,7 +34,11 @@ Three reasons:
 
 1. The mindset itself is the give. Tactics expire, principles compound.
 2. The skill suite is open source by design — a memory bus that lives on your machine and travels across tools should never be paywalled.
-3. Ahmed runs a separate longer paid program that's still in production. That's the upsell. This isn't.
+3. **Mindset Foundations** is the first tier of the multi-tier Vibe Coding Mastery program. More advanced tiers (deeper builds, AI product engineering, monetization) are in production and will be priced honestly when they ship. Foundations being free means the mindset reaches every developer who needs it — paid or not.
+
+### What's in the more advanced tiers?
+
+That's in production. The follow-up tiers go deeper into building, securing, and monetizing real AI products — function calling, MCP, RAG, full-stack deployment, the operational side of running an AI-augmented business. Pricing and timing will be announced **when they're ready** — not before. Mailing list at [aqaddoura.com](https://aqaddoura.com) gets you a heads-up.
 
 ### When do Sessions 2–5 launch?
 

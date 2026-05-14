@@ -1,10 +1,12 @@
-# Vibe Coding Mastery
+# Vibe Coding Mastery — Mindset Foundations
 
 > **The PURE Loop + AI Doctrine — a cross-tool memory and operating system for developers using AI.**
 >
+> A free 5-part series + open-source skill suite. The **first tier** of the Vibe Coding Mastery program. More advanced tiers follow under the same Mastery brand.
+>
 > By [Ahmed Qaddoura](https://aqaddoura.com) · Palestine
 
-[![License: MIT (skills)](https://img.shields.io/badge/skills-MIT-green)](LICENSE) [![Course: ARR](https://img.shields.io/badge/course-all%20rights%20reserved-blue)](LICENSE) [![Made in Palestine](https://img.shields.io/badge/made%20in-Palestine-success)](https://aqaddoura.com)
+[![Skills: MIT](https://img.shields.io/badge/skills-MIT-green)](LICENSE) [![Series: Free](https://img.shields.io/badge/series-free%20forever-success)](LICENSE) [![Made in Palestine](https://img.shields.io/badge/made%20in-Palestine-success)](https://aqaddoura.com)
 
 ---
 
@@ -12,7 +14,7 @@
 
 Most developers using AI in 2026 are still operating like it's 2023 — they type a prompt, copy the answer, ship the code, and forget what they learned. Six months in, they can't remember why their own codebase exists.
 
-This repo is the *operating system* the top 5% use instead.
+This repo is the *operating system* the top 5% use instead — the **Mindset Foundations** tier of the Vibe Coding Mastery program. Free, forever.
 
 It gives you:
 
@@ -46,7 +48,7 @@ Once installed, open Claude and try one of:
 
 Open Cursor or Copilot in the same project — they pick up the same rules automatically.
 
-## The 5 sessions
+## The 5 sessions (Mindset Foundations tier)
 
 | # | Session | Status |
 | --- | --- | --- |
@@ -56,7 +58,7 @@ Open Cursor or Copilot in the same project — they pick up the same rules autom
 | 4 | [Build Trusted SaaS — Security, UX & Margin From Day 1](sessions/session-04-saas/README.md) | ⏳ In production |
 | 5 | [Automate Your Career & Build on the Side (Stress-Free)](sessions/session-05-career/README.md) | ⏳ In production |
 
-All five sessions are **free**. Slides, practical walkthroughs, assignments, references — everything ships here as it's produced.
+All five sessions are **free**. Slides, practical walkthroughs, assignments, references — everything ships here as it's produced. More advanced tiers (deeper builds, full-stack AI products, monetization) will follow under the same Vibe Coding Mastery program.
 
 ## The 8 skills
 
@@ -157,9 +159,13 @@ Connect:
 
 See [LICENSE](LICENSE) for the full text.
 
+## What's next in the Mastery program
+
+This is the **Mindset Foundations** tier — free, opinionated, and load-bearing for everything that comes after. The next tiers in the same Vibe Coding Mastery program will go deeper into building, securing, and monetizing real AI products. Pricing and timing for those tiers will be announced when they're ready — not before.
+
 ## Stay in the loop
 
-📌 Mailing list: [aqaddoura.com](https://aqaddoura.com) — get a heads-up when Sessions 2–5 drop
+📌 Mailing list: [aqaddoura.com](https://aqaddoura.com) — get a heads-up when Sessions 2–5 drop and when the next Mastery tier ships
 📌 Star this repo on GitHub to follow along as content is added
 
 ---

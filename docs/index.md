@@ -1,6 +1,6 @@
 # Documentation Index
 
-Extended documentation for the Vibe Coding Mastery pre-course and skill suite.
+Extended documentation for **Vibe Coding Mastery — Mindset Foundations** (the free first tier of the Mastery program) and the open-source PURE + AI Doctrine skill suite.
 
 | Document | What it covers |
 | --- | --- |

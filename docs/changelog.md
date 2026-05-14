@@ -4,6 +4,20 @@ All notable changes to the Vibe Coding Mastery repo, skill suite, and course mat
 
 The format roughly follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versions are dated rather than numbered — this is a living curriculum, not a product release.
 
+## 2026-05-14 — Series naming locked: "Vibe Coding Mastery — Mindset Foundations"
+
+### Added
+
+- **Series title locked:** `Vibe Coding Mastery — Mindset Foundations`. This is the first tier of the multi-tier Vibe Coding Mastery program.
+- Main README hero, sessions intro, all 5 session READMEs now carry the series identity (`Vibe Coding Mastery — Mindset Foundations (Session N of 5)`).
+- Docs index intro updated.
+- FAQ gained a new "What's in the more advanced tiers?" Q&A.
+- docs/pricing.md updated to explain the multi-tier framing — Foundations is free, future tiers will be priced honestly when ready.
+
+### Strategic frame
+
+The brand is **Vibe Coding Mastery**. The free 5-session series is the **Mindset Foundations** tier. More advanced tiers will follow under the same Mastery brand — they don't exist yet, so they're not promoted yet.
+
 ## 2026-05-14 — Positioning reset: everything is free, no paid bundle
 
 ### Changed

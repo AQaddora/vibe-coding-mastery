@@ -2,6 +2,7 @@
 
 > *"The point isn't 'always be shipping'. The point is 'always be compounding'. Those are not the same thing."*
 
+**Series:** Vibe Coding Mastery — Mindset Foundations (Session 5 of 5)
 **Status:** ⏳ In production
 **Runtime:** 30 minutes (target)
 **Cost:** Free — like every session in this series

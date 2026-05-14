@@ -2,6 +2,7 @@
 
 > *"The gap between a demo and a real business is three things — security, UX, and unit economics. Most AI-built SaaS dies because the founder thinks of those last."*
 
+**Series:** Vibe Coding Mastery — Mindset Foundations (Session 4 of 5)
 **Status:** ⏳ In production
 **Runtime:** 30 minutes (target)
 **Cost:** Free — like every session in this series

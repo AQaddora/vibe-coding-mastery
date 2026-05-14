@@ -2,6 +2,7 @@
 
 > *"A 48-hour MVP isn't 'I built it fast'. It's 'I built it on purpose — and I know what I cut.'"*
 
+**Series:** Vibe Coding Mastery — Mindset Foundations (Session 3 of 5)
 **Status:** ⏳ In production
 **Runtime:** 30 minutes (target)
 **Cost:** Free — like every session in this series

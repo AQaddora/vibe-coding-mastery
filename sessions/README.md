@@ -1,6 +1,8 @@
-# Sessions
+# Sessions — Mindset Foundations
 
-A 5-session × 30-minute series on the developer mindset for working with AI. 2.5 hours total. **Free, forever.**
+The first tier of the **Vibe Coding Mastery** program. Five 30-minute sessions on the developer mindset for working with AI. 2.5 hours total. **Free, forever.**
+
+More advanced tiers (deeper builds, AI product engineering, monetization) will follow under the same Mastery brand. Mindset comes first because tactics built on weak thinking don't compound.
 
 | # | Title | The Core Idea | Status |
 | --- | --- | --- | --- |

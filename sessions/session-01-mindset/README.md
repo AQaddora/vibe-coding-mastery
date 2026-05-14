@@ -3,6 +3,7 @@
 > *"In 30 minutes, I'm going to teach you to think with AI, not just prompt it."*
 > — Ahmed Qaddoura
 
+**Series:** Vibe Coding Mastery — Mindset Foundations (Session 1 of 5)
 **Status:** ✅ Final
 **Runtime:** 30 minutes
 **Language:** Arabic delivery · English source script
