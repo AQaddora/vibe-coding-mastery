@@ -1,0 +1,52 @@
+# Session 1 — The AI-First Developer Mindset
+
+> *"In 30 minutes, I'm going to teach you to think with AI, not just prompt it."*
+> — Ahmed Qaddoura
+
+**Status:** ✅ Final · Available as free preview
+**Runtime:** 30 minutes
+**Language:** Arabic delivery · English source script
+**Cost:** Free — this is the on-ramp to the paid pre-course
+
+## What this session teaches
+
+The single biggest leverage shift in software in the last decade isn't a framework, a language, or a model. It's **how you operate the AI in your editor**. Most developers use AI like autocomplete — press Tab, paste errors, copy answers, ship.
+
+This session introduces the operating system the top 5% use instead. Two ideas. One framework. One file.
+
+1. **PURE Loop** — a four-phase protocol for any task you run with AI: **P**rime → **U**nderstand → **R**efine → **E**xecute.
+2. **AI Doctrine** — a personal rulebook (`ai-doctrine.md`) that captures every hard-won lesson and feeds it back into every future AI session across every tool.
+
+By the end of this session you'll know which "camp" you're in (Tab Tapper, Prompter, or Architect), how to run the PURE Loop on a real task in under an hour, and how to start a doctrine you keep for the rest of your career.
+
+## What's in this folder
+
+| File | Audience | What it is |
+| --- | --- | --- |
+| [`public/slides.pptx`](public/slides.pptx) | Trainees | The 12-slide neon-dev deck used during recording |
+| [`public/slides.pdf`](public/slides.pdf) | Trainees | Shareable PDF export of the same deck |
+| [`public/practical.md`](public/practical.md) | Trainees | Live walkthrough of PURE on a real task |
+| [`public/assignment.md`](public/assignment.md) | Trainees | 60-minute homework — run your first PURE loop on real work |
+| [`public/references.md`](public/references.md) | Trainees | Curated YouTube + reading list (Arabic) |
+| [`public/terminology.md`](public/terminology.md) | Trainees & Team | Bilingual glossary — when to keep English, when to translate |
+| `private/` (separate repo) | Production team | Speaker scripts (en+ar), teleprompter, camera/editor/designer notes |
+
+## How to use this session
+
+### As a learner (free preview path)
+1. Watch the recording (link will go here after publication)
+2. Read [`practical.md`](public/practical.md) and try the PURE Loop on a real task this week
+3. Complete [`assignment.md`](public/assignment.md) — 60 minutes
+4. Install the AI Doctrine system: `./skills/install.sh` from the repo root
+5. Continue to Session 2 (paid pre-course)
+
+### As a producer (private path)
+The production team uses the private repo for scripts and teleprompter copy. Access is gated.
+
+## Why this is free
+
+Session 1 is the lead magnet. The framework introduced here (PURE + AI Doctrine) is the load-bearing column under the entire 5-session pre-course and the 15-session Vibe Coding Mastery program. Giving Session 1 away costs nothing and earns trust. Sessions 2–5 are paid because that's where the system gets weaponized: defending against AI failure modes, shipping MVPs in a weekend, building trusted SaaS, and automating a career.
+
+---
+
+[← Back to all sessions](../README.md) · [Skills](../../skills/README.md) · [Templates](../../templates/README.md)

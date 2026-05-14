@@ -1,0 +1,76 @@
+name: CI
+
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    name: Lint shell and python
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install shellcheck
+        run: sudo apt-get update -qq && sudo apt-get install -y shellcheck
+
+      - name: Run shellcheck on all .sh files
+        run: |
+          find skills tools -name '*.sh' -print0 | \
+            xargs -0 -r shellcheck --severity=warning --shell=bash
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install ruff
+        run: pip install ruff
+
+      - name: Run ruff
+        run: ruff check skills/
+
+  structure:
+    name: Verify repo structure
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: All 7 skills present
+        run: |
+          for skill in doctrine-keeper prime understand refine execute organize-agents pure-orchestrator; do
+            if [[ ! -f "skills/$skill/SKILL.md" ]]; then
+              echo "Missing skill: $skill"
+              exit 1
+            fi
+          done
+          echo "All 7 skills present."
+
+      - name: Verify YAML frontmatter on every SKILL.md
+        run: |
+          for skill in skills/*/SKILL.md; do
+            if ! head -1 "$skill" | grep -q '^---$'; then
+              echo "Missing YAML frontmatter: $skill"
+              exit 1
+            fi
+            if ! grep -q '^name:' "$skill"; then
+              echo "Missing 'name:' field: $skill"
+              exit 1
+            fi
+            if ! grep -q '^description:' "$skill"; then
+              echo "Missing 'description:' field: $skill"
+              exit 1
+            fi
+          done
+          echo "Frontmatter valid on every skill."
+
+      - name: Verify no private session files committed
+        run: |
+          if find sessions -path '*/private/*' ! -name '.gitkeep' ! -name 'README.md' -type f | grep -q .; then
+            echo "Found private session files in tracked content:"
+            find sessions -path '*/private/*' ! -name '.gitkeep' ! -name 'README.md' -type f
+            exit 1
+          fi
+          echo "No private session files tracked."

@@ -1,0 +1,20 @@
+# Normalize line endings
+* text=auto eol=lf
+*.sh text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+
+# Binary files — never diff
+*.pptx binary
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.mp4 binary
+*.mov binary
+
+# Linguist — exclude vendored / generated dirs from language stats
+docs/images/* linguist-vendored
+sessions/*/public/slides.pptx linguist-vendored

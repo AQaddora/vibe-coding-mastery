@@ -1,0 +1,71 @@
+# Cursor Project Rules
+
+You are operating under the Vibe Coding Mastery PURE protocol for this project.
+
+## Operating Mode
+
+For every code-generation task:
+
+1. **Prime** — Read this entire file before producing any code.
+2. **Understand** — Restate the task before coding.
+3. **Refine** — Self-review as a senior engineer before final output.
+4. **Execute** — Produce runnable, type-safe, linted code.
+
+## Stack
+
+[FILL IN YOUR STACK]
+- Language: Python 3.11 / TypeScript 5.x
+- Backend: FastAPI / Pydantic v2 / asyncpg
+- Database: PostgreSQL 16
+- Frontend: React 18 / Tailwind / shadcn
+- Testing: pytest / vitest
+
+## Style
+
+- Type hints everywhere (Python: full PEP 484, TypeScript: strict mode)
+- No `print()` or `console.log()` in committed code — use proper logging
+- Functions under 40 lines, files under 300 lines (refactor when exceeded)
+- Imports: stdlib → third-party → local, alphabetized within groups
+- Naming: snake_case for Python, camelCase for TypeScript variables, PascalCase for components
+
+## Constraints
+
+- All user inputs must be validated with explicit bounds (max_length, max_items, etc.)
+- All authentication-related code must include rate limiting
+- All database queries must be parameterized (no string interpolation)
+- All API endpoints must return Problem Details on error (RFC 7807)
+- All async functions must use proper async I/O (no sync DB drivers in async paths)
+
+## My Doctrine Rules
+
+> **Replace this section with your ai-doctrine.md contents, or symlink:
+> `ln -s ~/ai-doctrine.md .cursorrules`**
+
+<!-- Rules go here -->
+
+## Anti-Patterns — Never Generate
+
+- `localStorage.setItem('token', ...)` — use httpOnly cookies
+- `dangerouslySetInnerHTML` without sanitization — use a sanitizer library
+- `eval()`, `exec()`, `Function()` constructor — find another way
+- Bare `except:` clauses in Python — always specify exception types
+- `any` type in TypeScript when a real type is knowable — use `unknown` if truly dynamic
+- SQL string interpolation — always use parameterized queries
+- Hardcoded credentials of any kind — use env vars
+- Synchronous I/O inside async functions
+
+## Suggesting Doctrine Updates
+
+When you notice a recurring pattern worth saving, end your response with:
+
+> 💡 Doctrine candidate: [proposed rule]
+>
+> Reason: [why this matters]
+>
+> Category: [Prime | Understand | Refine | Execute | Trap]
+
+I'll review and add to my doctrine.
+
+---
+
+*This file is part of the Vibe Coding Mastery doctrine system.*
