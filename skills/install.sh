@@ -5,14 +5,14 @@
 # What this does:
 #
 #   1. Creates ~/ai-doctrine.md (your master doctrine — the cross-tool memory)
-#   2. Installs all 7 PURE + AI Doctrine skills into ~/.claude/skills/
+#   2. Installs all 8 PURE + AI Doctrine skills into ~/.claude/skills/
 #   3. Makes scripts executable
 #   4. Offers to wire the doctrine into your current project (CLAUDE.md,
 #      .cursorrules, AGENTS.md, .github/copilot-instructions.md, .windsurfrules)
 #      so Cursor / Copilot / Codex / Gemini / Windsurf all read the same memory
 #   5. Verifies everything
 #
-# The 7 skills:
+# The 8 skills:
 #   doctrine-keeper      → write head (the memory bus)
 #   prime                → P of PURE — build a primer from your stack + doctrine
 #   understand           → U of PURE — clarify scope before code
@@ -20,6 +20,7 @@
 #   execute              → E of PURE — delegate to an agent, track the run
 #   organize-agents      → registry of agent runs across tools
 #   pure-orchestrator    → runs the full P→U→R→E loop with checkpoints
+#   handoff              → migrates a long session to a fresh chat without losing state
 #
 # Run from the skills/ folder:
 #   ./install.sh                        # default install
@@ -51,7 +52,7 @@ SKILLS_DIR="$SCRIPT_DIR"
 CLAUDE_SKILLS_HOME="$HOME/.claude/skills"
 DOCTRINE_PATH="$HOME/ai-doctrine.md"
 
-# All 7 skills, in install order (doctrine-keeper first — others depend on it)
+# All 8 skills, in install order (doctrine-keeper first — others depend on it)
 SKILLS=(
     "doctrine-keeper"
     "prime"
@@ -60,6 +61,7 @@ SKILLS=(
     "execute"
     "organize-agents"
     "pure-orchestrator"
+    "handoff"
 )
 
 # ─── Colors (terminal-aware) ─────────────────────────────────────────────────
@@ -103,7 +105,7 @@ for skill in "${SKILLS[@]}"; do
         exit 1
     fi
 done
-ok "All 7 skills present in $SKILLS_DIR"
+ok "All 8 skills present in $SKILLS_DIR"
 
 # ─── Step 2: Bootstrap the doctrine ──────────────────────────────────────────
 section "2/5 · Bootstrap your AI Doctrine"
@@ -121,7 +123,7 @@ else
 fi
 
 # ─── Step 3: Install all 7 skills ────────────────────────────────────────────
-section "3/5 · Install skills into Claude (~/.claude/skills/)"
+section "3/5 · Install 8 skills into Claude (~/.claude/skills/)"
 
 mkdir -p "$CLAUDE_SKILLS_HOME"
 
@@ -204,7 +206,7 @@ ${BOLD}${GREEN}━━━ Installation complete ━━━${RESET}
 
 ${BOLD}What you have now:${RESET}
   • A personal AI Doctrine at:  ${BLUE}$DOCTRINE_PATH${RESET}
-  • All 7 skills installed in:  ${BLUE}$CLAUDE_SKILLS_HOME${RESET}
+  • All 8 skills installed in:  ${BLUE}$CLAUDE_SKILLS_HOME${RESET}
   • A memory bus that travels with you across every AI coding tool
 
 ${BOLD}The PURE Loop (your new operating system):${RESET}
@@ -215,6 +217,7 @@ ${BOLD}The PURE Loop (your new operating system):${RESET}
   ${DIM} ${RESET}  organize-agents    registry of agent runs across tools
   ${DIM} ${RESET}  pure-orchestrator  runs the full P→U→R→E loop end-to-end
   ${DIM} ${RESET}  doctrine-keeper    writes every learning back to your doctrine
+  ${DIM} ${RESET}  handoff            migrates a long session to a fresh chat cleanly
 
 ${BOLD}First time? Try this:${RESET}
 

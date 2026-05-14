@@ -18,7 +18,7 @@ It gives you:
 
 1. **A 4-phase loop** — **P**rime → **U**nderstand → **R**efine → **E**xecute — that turns any AI session into a senior-pair experience instead of fancy autocomplete.
 2. **A personal AI Doctrine** — `~/ai-doctrine.md`, a single file on your machine that captures every hard-won rule and is symlinked into Claude, Cursor, Copilot, Codex, Gemini CLI, and Windsurf so the same memory follows you across every tool.
-3. **Seven skills** that make both of the above automatic in Claude (and any agent that reads the doctrine).
+3. **Eight skills** that make both of the above automatic in Claude (and any agent that reads the doctrine), including a **handoff** skill that cleanly migrates long sessions to fresh chats when context fills up.
 
 The framework is invented and battle-tested in production. The skills are open source (MIT). The course material that teaches it is yours to study for free in Session 1.
 
@@ -58,7 +58,7 @@ Open Cursor or Copilot in the same project — they pick up the same rules autom
 
 Session 1 is the free lead magnet — slides, practical walkthrough, assignment, references. Sessions 2–5 are sold as a bundle (pricing TBA — see [docs/pricing.md](docs/pricing.md)).
 
-## The 7 skills
+## The 8 skills
 
 | # | Skill | What it does | Install path |
 | --- | --- | --- | --- |
@@ -69,8 +69,9 @@ Session 1 is the free lead magnet — slides, practical walkthrough, assignment,
 | 5 | [`execute`](skills/execute/SKILL.md) | Delegates work to a coding agent, tracks the run | `./skills/install.sh` |
 | 6 | [`organize-agents`](skills/organize-agents/SKILL.md) | Registry of agent runs across every tool | `./skills/install.sh` |
 | 7 | [`pure-orchestrator`](skills/pure-orchestrator/SKILL.md) | Runs the full P→U→R→E loop with checkpoints | `./skills/install.sh` |
+| 8 | [`handoff`](skills/handoff/SKILL.md) | Migrates a long session to a fresh chat without losing state | `./skills/install.sh` |
 
-All 7 are MIT licensed. The orchestrator pulls in the others.
+All 8 are MIT licensed. The orchestrator pulls in the others.
 
 ## Cross-tool memory — how it works
 
@@ -115,7 +116,7 @@ vibe-coding-mastery/
 │   ├── session-04-saas/       ← ⏳ paid pre-course
 │   └── session-05-career/     ← ⏳ paid pre-course
 │
-├── skills/                    ← the 7 PURE + AI Doctrine skills (MIT)
+├── skills/                    ← the 8 PURE + AI Doctrine skills (MIT)
 │   ├── install.sh             ← one-shot installer
 │   ├── doctrine-keeper/
 │   ├── prime/
@@ -123,7 +124,8 @@ vibe-coding-mastery/
 │   ├── refine/
 │   ├── execute/
 │   ├── organize-agents/
-│   └── pure-orchestrator/
+│   ├── pure-orchestrator/
+│   └── handoff/
 │
 ├── templates/                 ← per-tool config templates (CLAUDE.md, etc.)
 ├── tools/                     ← session scaffolders + slide build helpers

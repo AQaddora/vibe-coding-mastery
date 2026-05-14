@@ -38,15 +38,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: All 7 skills present
+      - name: All 8 skills present
         run: |
-          for skill in doctrine-keeper prime understand refine execute organize-agents pure-orchestrator; do
+          for skill in doctrine-keeper prime understand refine execute organize-agents pure-orchestrator handoff; do
             if [[ ! -f "skills/$skill/SKILL.md" ]]; then
               echo "Missing skill: $skill"
               exit 1
             fi
           done
-          echo "All 7 skills present."
+          echo "All 8 skills present."
 
       - name: Verify YAML frontmatter on every SKILL.md
         run: |

@@ -1,6 +1,6 @@
 # Skills — The PURE + AI Doctrine Skill Suite
 
-Seven AI coding skills that work together as a **cross-tool memory and operating system** for developers using Claude, Cursor, Copilot, Codex, Gemini CLI, Aider, and Windsurf.
+Eight AI coding skills that work together as a **cross-tool memory and operating system** for developers using Claude, Cursor, Copilot, Codex, Gemini CLI, Aider, and Windsurf.
 
 Invented and maintained by [Ahmed Qaddoura](https://aqaddoura.com).
 
@@ -20,7 +20,7 @@ The installer:
 2. Installs all 7 skills into `~/.claude/skills/`
 3. Optionally wires the doctrine into your current project so every AI tool reads it
 
-## The 7 skills
+## The 8 skills
 
 | # | Skill | One-line purpose | Status |
 | --- | --- | --- | --- |
@@ -31,6 +31,7 @@ The installer:
 | 5 | [`execute`](execute/SKILL.md) | **E** of PURE. Delegates work to a coding agent and tracks the run. | 🧱 Skeleton |
 | 6 | [`organize-agents`](organize-agents/SKILL.md) | Registry of agent runs across every tool you use. | 🧱 Skeleton |
 | 7 | [`pure-orchestrator`](pure-orchestrator/SKILL.md) | Runs the full P→U→R→E loop end-to-end with user checkpoints. | 🧱 Skeleton |
+| 8 | [`handoff`](handoff/SKILL.md) | Migrates a long session to a fresh chat without losing state. | 🧱 Skeleton |
 
 Skeleton = structure + descriptions + protocol are final. Scripts and helper logic are being built in dedicated sessions and shipped progressively.
 
@@ -44,9 +45,16 @@ Feature request
 │  pure-orchestrator  │  ← entry point
 └──────────┬──────────┘
            │
-   ┌───────┼────────┬────────┐
-   ▼       ▼        ▼        ▼
- prime  understand refine  execute  ←  the PURE phases
+           ▼
+         prime    ←  loads context from doctrine
+           │
+           ├── [context-pressure gate]
+           │       │
+           │       ▼
+           │   handoff  ← optional: migrate to fresh chat with state preserved
+           │
+           ▼
+        understand  refine  execute  ←  rest of the PURE phases
                                 │
                                 ▼
                        organize-agents  ← tracks the agent run

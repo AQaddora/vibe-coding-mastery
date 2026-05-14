@@ -4,6 +4,23 @@ All notable changes to the Vibe Coding Mastery repo, skill suite, and course mat
 
 The format roughly follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versions are dated rather than numbered — this is a living curriculum, not a product release.
 
+## 2026-05-14 — Handoff skill added (8th skill)
+
+### Added
+
+- **New skill: `handoff`** — formalizes the context-window evacuation technique Ahmed has been using manually. Produces a copy-pasteable Markdown handoff block that migrates a long AI coding session to a fresh chat without losing state.
+- Handoff trigger phrases: "handoff this", "we're running out of context", "fresh chat for this", "this is getting heavy", "prepare a handoff"
+- AI-driven proactive detection — when the orchestrator (or any skill) notices ~40+ turns, >10 files read, or scope drift, it suggests a handoff and waits for user approval before producing the block
+- `references/handoff-format.md` — canonical handoff block template with annotated example and anti-patterns
+- **pure-orchestrator updated** — context-pressure gate between Phase 1 (Prime) and Phase 2 (Understand). Handoff fires after Prime completes so the new chat boots loaded.
+- `skills/install.sh` updated to install 8 skills (was 7)
+- Main README, skills README, and CI structural check all bumped to 8 skills
+- Architecture diagram in skills/README updated to show the context-pressure gate
+
+### Why this matters
+
+The handoff technique is what bootstrapped this entire repo — the original cowork session that built the public + private repos started from a single handoff block in a fresh Claude chat. Until now it was an informal practice Ahmed used by hand. The skill formalizes it as part of the standard PURE discipline.
+
 ## 2026-05-14 — Windows install paths added
 
 ### Added

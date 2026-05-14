@@ -19,13 +19,31 @@ Trigger when the user:
 - Wants enforced quality on a high-stakes task (auth, payments, migrations)
 - Is teaching a junior or recording a demo and wants every phase visible
 
-## How It Works (4-Phase Protocol)
+## How It Works (4-Phase Protocol + Context-Pressure Gate)
 
-The skill calls the four PURE skills in sequence, with explicit checkpoints between phases.
+The skill calls the four PURE skills in sequence, with explicit checkpoints between phases. Between Phase 1 (Prime) and Phase 2 (Understand) there is a **context-pressure gate** that may invoke the `handoff` skill if the orchestrator detects the remaining work won't fit the current conversation.
 
 ### Phase 1 — Prime
 
 Invoke `prime` skill. Outputs primer block. **Checkpoint:** user approves primer. If no, route back to Prime with the user's correction.
+
+### Context-pressure gate (between Phase 1 and Phase 2)
+
+After Prime completes — before invoking Understand — assess context pressure heuristically:
+
+- Has the conversation exceeded ~40 turns?
+- Have >10 files been read into context?
+- Has the task scope expanded substantially since the user's original ask?
+- Is the user reporting the AI is "forgetting" earlier instructions?
+- Did the user explicitly request a handoff?
+
+If any of these are true, **pause and offer a handoff before continuing**:
+
+> *"Quick check — context is starting to fill up. Want me to prepare a handoff block so we can continue this PURE loop in a fresh chat with full state? Prime is already complete, so the new chat will boot loaded."*
+
+If the user approves, invoke the `handoff` skill. The handoff block carries the approved primer reference + the original task + locked decisions so far. The user pastes into a fresh chat, the orchestrator resumes at **Phase 2 (Understand)**.
+
+If the user declines or no pressure is detected, continue to Phase 2 normally.
 
 ### Phase 2 — Understand
 
@@ -65,6 +83,7 @@ User picks which to save. Routes through `doctrine-keeper`. After `sync_to_agent
 3. **One feature per loop.** If the user's request spans 3 features, split into 3 runs.
 4. **Surface deviations.** If the user overrides a phase's default ("skip Refine"), log the override in the final runfile so it shows up in `organize-agents` analytics.
 5. **Capture is non-negotiable.** Even if the user passes on saving any doctrine entries, *ask* — the question itself is part of the discipline.
+6. **Handoff between Prime and Understand only.** Context-pressure detection runs AFTER Prime completes (so the handoff carries a valid primer) and BEFORE Understand begins (so no scope work is lost). Don't fire the handoff mid-Understand or mid-Refine — wait until the next natural phase boundary.
 
 ## Doctrine Integration
 
