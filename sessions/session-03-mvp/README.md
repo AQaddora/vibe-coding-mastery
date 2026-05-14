@@ -4,7 +4,7 @@
 
 **Status:** ⏳ In production
 **Runtime:** 30 minutes (target)
-**Cost:** Paid (part of the pre-course bundle)
+**Cost:** Free — like every session in this series
 
 ## The promise
 

@@ -20,27 +20,35 @@ A prompt template is one-shot. The AI Doctrine compounds — each session adds n
 
 ### Did Ahmed invent PURE and AI Doctrine?
 
-Yes. The framework was developed in production from real founder/agency/teaching work and is the core IP of the Vibe Coding Mastery curriculum. The names and the protocol are credited to Ahmed Qaddoura. The skill implementations are MIT licensed — fair use of the framework names is welcome with attribution.
+Yes. The framework was developed in production from real founder/agency/teaching work. The names and the protocol are credited to Ahmed Qaddoura. The skill implementations are MIT licensed — fair use of the framework names is welcome with attribution.
 
-## About the course
+## About the series
 
-### Why is Session 1 free?
+### Is this free?
 
-It's the on-ramp. The framework introduced in Session 1 (PURE + AI Doctrine) is the load-bearing column under the entire pre-course and the 15-session main course. Giving it away costs nothing and earns trust. Sessions 2–5 are paid because that's where the system gets weaponized — defending against AI failure modes, shipping MVPs, building trusted SaaS, automating careers.
+Yes. All 5 sessions and the full skill suite are free, forever. There is no paid bundle attached to this material. This is a give to the developer community.
 
-### Who is this course for?
+### Why is it free if it's so detailed?
+
+Three reasons:
+
+1. The mindset itself is the give. Tactics expire, principles compound.
+2. The skill suite is open source by design — a memory bus that lives on your machine and travels across tools should never be paywalled.
+3. Ahmed runs a separate longer paid program that's still in production. That's the upsell. This isn't.
+
+### When do Sessions 2–5 launch?
+
+In production now. Mailing list at [aqaddoura.com](https://aqaddoura.com) — you'll get a heads-up when each session ships.
+
+### Who is this series for?
 
 Developers (junior to mid-level) who want career leverage from AI. Technical founders and freelancers who can code a bit and want to ship. Career switchers and ambitious students with basic coding ability.
 
 You should be comfortable with a code editor, understand what an API is, and have shipped at least one thing (even a static site).
 
-### Is the course in English or Arabic?
+### Is the series in English or Arabic?
 
 The slides and source scripts are written in English. The recorded delivery is in Arabic (Ahmed's primary teaching language). English subtitles will be provided.
-
-### When do Sessions 2–5 launch?
-
-In production now. Mailing list at [aqaddoura.com](https://aqaddoura.com) — you'll get a heads-up when each session ships.
 
 ## About the skills
 
@@ -66,9 +74,9 @@ Yes — MIT license. Fork the repo, modify `SKILL.md`, reinstall with `./skills/
 
 Yes. Add a folder under `skills/`, follow the structure of an existing skill (`SKILL.md` + `references/` + `scripts/`), and your skill will be picked up by `install.sh` automatically.
 
-### What if I don't want all 7 skills?
+### What if I don't want all 8 skills?
 
-Run `./skills/install.sh`, then `rm -rf ~/.claude/skills/<skill-name>` for any you don't want. The orchestrator works best with all 7 but each skill can be used standalone.
+Run `./skills/install.sh`, then `rm -rf ~/.claude/skills/<skill-name>` for any you don't want. The orchestrator works best with all 8 but each skill can be used standalone.
 
 ## Privacy & licensing
 
@@ -84,9 +92,9 @@ Only in the sense that any prompt you send to an AI tool includes whatever rules
 
 Yes — with credit. The framework is open to reference, build on, and teach. Just don't strip attribution or rebrand the names.
 
-### What about the course content?
+### Can I republish the session content?
 
-`sessions/*/public/` is **All Rights Reserved** — read and apply for personal learning, do not republish or use to produce competing courses. See [LICENSE](../LICENSE).
+The session material is free to learn from and share with credit + a link back to this repo. Republishing the slides, scripts, or practical walkthroughs as your own (or using them to produce competing courses) is not permitted. See [LICENSE](../LICENSE).
 
 ---
 

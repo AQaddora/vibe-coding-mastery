@@ -20,7 +20,7 @@ It gives you:
 2. **A personal AI Doctrine** — `~/ai-doctrine.md`, a single file on your machine that captures every hard-won rule and is symlinked into Claude, Cursor, Copilot, Codex, Gemini CLI, and Windsurf so the same memory follows you across every tool.
 3. **Eight skills** that make both of the above automatic in Claude (and any agent that reads the doctrine), including a **handoff** skill that cleanly migrates long sessions to fresh chats when context fills up.
 
-The framework is invented and battle-tested in production. The skills are open source (MIT). The course material that teaches it is yours to study for free in Session 1.
+The framework is invented and battle-tested in production. The skills are open source (MIT). The 5-session companion series that teaches the mindset is free, forever. This is a give, not a funnel.
 
 ## Quick start
 
@@ -48,15 +48,15 @@ Open Cursor or Copilot in the same project — they pick up the same rules autom
 
 ## The 5 sessions
 
-| # | Session | Status | Cost |
-| --- | --- | --- | --- |
-| 1 | [The AI-First Developer Mindset](sessions/session-01-mindset/README.md) | ✅ Final | **Free** |
-| 2 | [Get the Best From AI Tools (Without Getting Burned)](sessions/session-02-defense/README.md) | ⏳ In production | Paid |
-| 3 | [Ship Your MVP in a Weekend](sessions/session-03-mvp/README.md) | ⏳ In production | Paid |
-| 4 | [Build Trusted SaaS — Security, UX & Margin From Day 1](sessions/session-04-saas/README.md) | ⏳ In production | Paid |
-| 5 | [Automate Your Career & Build on the Side (Stress-Free)](sessions/session-05-career/README.md) | ⏳ In production | Paid |
+| # | Session | Status |
+| --- | --- | --- |
+| 1 | [The AI-First Developer Mindset](sessions/session-01-mindset/README.md) | ✅ Final |
+| 2 | [Get the Best From AI Tools (Without Getting Burned)](sessions/session-02-defense/README.md) | ⏳ In production |
+| 3 | [Ship Your MVP in a Weekend](sessions/session-03-mvp/README.md) | ⏳ In production |
+| 4 | [Build Trusted SaaS — Security, UX & Margin From Day 1](sessions/session-04-saas/README.md) | ⏳ In production |
+| 5 | [Automate Your Career & Build on the Side (Stress-Free)](sessions/session-05-career/README.md) | ⏳ In production |
 
-Session 1 is the free lead magnet — slides, practical walkthrough, assignment, references. Sessions 2–5 are sold as a bundle (pricing TBA — see [docs/pricing.md](docs/pricing.md)).
+All five sessions are **free**. Slides, practical walkthroughs, assignments, references — everything ships here as it's produced.
 
 ## The 8 skills
 
@@ -137,9 +137,9 @@ Private course materials (speaker scripts, teleprompter copy, role notes) live i
 
 ## About Ahmed
 
-[Ahmed Qaddoura](https://aqaddoura.com) — software architect, builder, and instructor from Gaza, Palestine. Background spans game development (Unity), backend systems (Python/FastAPI/PostgreSQL), and the Palestine Innovation Initiative · Taqat Academy.
+[Ahmed Qaddoura](https://aqaddoura.com) — software architect, builder, and instructor from Gaza, Palestine. Background spans game development (Unity), backend systems (Python/FastAPI/PostgreSQL), and work with the Palestine Innovation Initiative + Taqat Academy.
 
-The PURE Loop + AI Doctrine framework is the system Ahmed runs in production daily. It's been pressure-tested across founder work, agency client builds, and teaching cohorts of Palestinian developers.
+The PURE Loop + AI Doctrine framework is the system Ahmed runs in production daily. It's been pressure-tested across founder work, agency client builds, and teaching cohorts of Palestinian developers. The 5-session series here is the mindset behind it — shared free as a give to the developer community.
 
 Connect:
 
@@ -152,19 +152,15 @@ Connect:
 | What | License |
 | --- | --- |
 | Everything in `skills/`, `templates/`, `tools/`, `.github/` | **MIT** — use, fork, build on |
-| Everything in `sessions/`, `docs/` | **All Rights Reserved** — read and apply for personal learning, do not republish |
+| Everything in `sessions/`, `docs/` | **Free to learn from. Copyright Ahmed Qaddoura — do not republish or repackage.** |
 | The **PURE Loop** and **AI Doctrine** framework names | Credit when referencing — they're Ahmed's invention |
 
 See [LICENSE](LICENSE) for the full text.
 
-## Get the full pre-course
+## Stay in the loop
 
-Session 1 is free. Sessions 2–5 (defense, MVP, SaaS, career) ship as a paid bundle.
-
-📌 Pricing and signup: [docs/pricing.md](docs/pricing.md) — *coming soon*
 📌 Mailing list: [aqaddoura.com](https://aqaddoura.com) — get a heads-up when Sessions 2–5 drop
-
-If you want the *long* version (15 sessions on building AI products from scratch — function calling, MCP, RAG, deployment, monetization), that's the **Vibe Coding Mastery** main course with [Mohammed Almadhoun](https://aqaddoura.com). The pre-course is the on-ramp.
+📌 Star this repo on GitHub to follow along as content is added
 
 ---
 

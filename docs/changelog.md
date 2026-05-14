@@ -4,6 +4,22 @@ All notable changes to the Vibe Coding Mastery repo, skill suite, and course mat
 
 The format roughly follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versions are dated rather than numbered — this is a living curriculum, not a product release.
 
+## 2026-05-14 — Positioning reset: everything is free, no paid bundle
+
+### Changed
+
+- **All 5 sessions are now free.** Previously framed as "Session 1 free + Sessions 2–5 paid bundle." That framing is gone. The mindset series is a give to the developer community, full stop.
+- **No pricing page.** `docs/pricing.md` rewritten to explain why there's no pricing — it's a free repo.
+- **Future paid program de-emphasized.** The longer paid Vibe Coding Mastery program is in production but not promoted yet — it'll be announced when ready. Removed forward-looking mentions from the README, FAQ, Session 5, and the private repo README.
+- **LICENSE softened.** The session content stays copyright-protected against republishing/rebranding, but the framing now leads with what readers *may* do freely (read, share, quote, apply, build, earn) rather than what's restricted.
+- **FAQ rewritten.** Replaced "free preview vs paid course" Q&As with clear "everything is free" answers.
+- **Session READMEs cleaned.** Sessions 2–5 placeholders no longer say "Cost: Paid". Session 1 README removed its "Why this is free" section (it's the wrong frame now — every session is free).
+- **Sessions README updated.** Removed lead-magnet framing; described as a free mindset series, period.
+
+### Why
+
+This isn't a sales funnel. It's a mindset share. The skill suite has always been MIT-licensed and freely installable. Now the session content matches that posture.
+
 ## 2026-05-14 — Handoff skill added (8th skill)
 
 ### Added

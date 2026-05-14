@@ -3,10 +3,10 @@
 > *"In 30 minutes, I'm going to teach you to think with AI, not just prompt it."*
 > — Ahmed Qaddoura
 
-**Status:** ✅ Final · Available as free preview
+**Status:** ✅ Final
 **Runtime:** 30 minutes
 **Language:** Arabic delivery · English source script
-**Cost:** Free — this is the on-ramp to the paid pre-course
+**Cost:** Free — like everything else in this repo
 
 ## What this session teaches
 
@@ -33,19 +33,15 @@ By the end of this session you'll know which "camp" you're in (Tab Tapper, Promp
 
 ## How to use this session
 
-### As a learner (free preview path)
+### As a learner
 1. Watch the recording (link will go here after publication)
 2. Read [`practical.md`](public/practical.md) and try the PURE Loop on a real task this week
 3. Complete [`assignment.md`](public/assignment.md) — 60 minutes
 4. Install the AI Doctrine system: `./skills/install.sh` from the repo root
-5. Continue to Session 2 (paid pre-course)
+5. Continue to Session 2 when it's published
 
-### As a producer (private path)
-The production team uses the private repo for scripts and teleprompter copy. Access is gated.
-
-## Why this is free
-
-Session 1 is the lead magnet. The framework introduced here (PURE + AI Doctrine) is the load-bearing column under the entire 5-session pre-course and the 15-session Vibe Coding Mastery program. Giving Session 1 away costs nothing and earns trust. Sessions 2–5 are paid because that's where the system gets weaponized: defending against AI failure modes, shipping MVPs in a weekend, building trusted SaaS, and automating a career.
+### As a producer
+The production team uses the private repo for scripts and teleprompter copy. Access is gated to the team.
 
 ---
 

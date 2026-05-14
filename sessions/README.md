@@ -1,10 +1,10 @@
 # Sessions
 
-The Vibe Coding Mastery Pre-Course is 5 sessions × 30 minutes — 2.5 hours total. Session 1 is free. Sessions 2–5 are sold as a bundle.
+A 5-session × 30-minute series on the developer mindset for working with AI. 2.5 hours total. **Free, forever.**
 
 | # | Title | The Core Idea | Status |
 | --- | --- | --- | --- |
-| 1 | [The AI-First Developer Mindset](session-01-mindset/README.md) | How to think with AI, not just prompt it | ✅ Final · Free |
+| 1 | [The AI-First Developer Mindset](session-01-mindset/README.md) | How to think with AI, not just prompt it | ✅ Final |
 | 2 | [Get the Best From AI Tools (Without Getting Burned)](session-02-defense/) | The 7 hidden failure modes of AI tools | ⏳ In production |
 | 3 | [Ship Your MVP in a Weekend](session-03-mvp/) | A repeatable 48-hour idea → live product framework | ⏳ In production |
 | 4 | [Build Trusted SaaS — Security, UX & Margin From Day 1](session-04-saas/) | What separates a demo from a real business | ⏳ In production |
@@ -24,8 +24,8 @@ Every session follows the same recording structure to keep quality predictable:
 
 Each session has two folders:
 
-- `public/` — slides, practical walkthrough, assignment, references, terminology. Lives in this public repo.
-- `private/` — scripts, teleprompter, role notes for the production team. Lives in the separate [private repo](https://github.com/AQaddora/vibe-coding-mastery-private).
+- `public/` — slides, practical walkthrough, assignment, references, terminology. Lives here in this public repo. Free.
+- `private/` — scripts, teleprompter, role notes for the production team. Lives in the separate [private repo](https://github.com/AQaddora/vibe-coding-mastery-private). Not paid content — just production materials that aren't useful to learners.
 
 Only Session 1's `public/` is filled in right now. The other four are placeholders being produced.
 

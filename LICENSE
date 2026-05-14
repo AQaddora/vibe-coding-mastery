@@ -36,24 +36,27 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ────────────────────────────────────────────────────────────────────────
-2. COURSE CONTENT (sessions/, docs/)  →  All Rights Reserved
+2. SERIES CONTENT (sessions/, docs/)  →  Free to learn from, copyright reserved
 ────────────────────────────────────────────────────────────────────────
 
-The course material in sessions/*/public/ and docs/ is published as a free
-public preview of the Vibe Coding Mastery Pre-Course.
+The 5-session mindset series in sessions/*/public/ and the documentation
+in docs/ is published as a free, freely-accessible give to the developer
+community.
 
-Copyright (c) 2026 Ahmed Qaddoura. All Rights Reserved.
+Copyright (c) 2026 Ahmed Qaddoura.
 
-You may:
-  ✓ Read, study, and apply the material for personal learning
+You may, freely and without payment:
+  ✓ Read, watch, study, and apply the material for personal learning
+  ✓ Share links to this repo and to individual sessions
   ✓ Quote short excerpts with attribution and a link to the source
   ✓ Reference the framework names (PURE, AI Doctrine) when crediting the author
+  ✓ Use what you learn to build, ship, and earn as a developer
 
-You may NOT:
-  ✗ Republish or redistribute the course material in any form
+You may NOT, without explicit written permission:
+  ✗ Republish or mirror the slides, scripts, practicals, or assignments
   ✗ Create derivative courses, tutorials, or paid products from this content
-  ✗ Remove attribution or rebrand the PURE / AI Doctrine framework
-  ✗ Train AI models on this content without explicit written permission
+  ✗ Remove attribution or rebrand the PURE / AI Doctrine framework as your own
+  ✗ Train AI models or fine-tunes on this content
 
-For commercial use, course licensing, or partnership inquiries:
+For licensing or partnership inquiries:
   https://aqaddoura.com
