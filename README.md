@@ -24,11 +24,15 @@ The framework is invented and battle-tested in production. The skills are open s
 
 ## Quick start
 
+**macOS / Linux:**
+
 ```bash
 git clone https://github.com/AQaddora/vibe-coding-mastery.git
 cd vibe-coding-mastery
 ./skills/install.sh
 ```
+
+**Windows:** the installer runs on Git Bash, WSL2, or as a PowerShell-only fallback. Full step-by-step in [`docs/install.md`](docs/install.md).
 
 The installer creates `~/ai-doctrine.md`, installs all 7 skills into `~/.claude/skills/`, and (optionally) wires the doctrine into your current project so every AI tool reads the same memory.
 

@@ -4,6 +4,16 @@ All notable changes to the Vibe Coding Mastery repo, skill suite, and course mat
 
 The format roughly follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versions are dated rather than numbered — this is a living curriculum, not a product release.
 
+## 2026-05-14 — Windows install paths added
+
+### Added
+
+- `docs/install.md` — full installation guide covering macOS, Linux, and Windows
+- Windows paths documented: Git Bash (recommended), WSL2 (power users), pure PowerShell with copy-not-symlink fallback
+- Troubleshooting section covering symlink edge cases, skill detection, and uninstall
+- Main README Quick Start now links to the install doc for Windows users
+- Docs index links to the new install guide
+
 ## 2026-05-13 — Initial public release
 
 ### Added
