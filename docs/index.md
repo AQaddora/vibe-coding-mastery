@@ -13,7 +13,7 @@ For the main READMEs:
 
 - [Repo root](../README.md)
 - [Sessions](../sessions/README.md)
-- [Skills](../skills/README.md)
+- [Skills — in the dedicated suite repo](https://github.com/AQaddora/pure-skill-suite)
 - [Templates](../templates/README.md)
 
 ---

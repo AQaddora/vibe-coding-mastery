@@ -4,12 +4,11 @@ Thanks for thinking about contributing. This repo is split into two zones with d
 
 ## What's open to contributions
 
-**Skills, templates, and tools** under MIT license. Pull requests welcome for:
+**Templates and tools** under MIT license. Pull requests welcome for:
 
-- New skills that extend the PURE + AI Doctrine workflow
-- Improvements to existing skill scripts (bug fixes, cross-platform support, better error messages)
 - New templates for additional AI coding tools (Aider, Cline, Continue, Zed, etc.)
 - Tools that automate session production (slide builders, video processors, transcript generators)
+- Fixes / improvements to `install.sh` (the shim that delegates to [pure-skill-suite](https://github.com/AQaddora/pure-skill-suite))
 
 ## What's closed
 
@@ -17,14 +16,15 @@ Thanks for thinking about contributing. This repo is split into two zones with d
 
 If you spot a factual error, typo, or broken link in published content, open an issue with the `content-fix` label — we'll handle the edit ourselves.
 
-## How to propose a new skill
+## Skill contributions go to a different repo
 
-1. Open an issue using the `skill-suggestion` template
-2. Describe the trigger phrases, the protocol, and how it integrates with the doctrine
-3. Wait for maintainer approval before writing code
-4. Build inside `skills/<your-skill-name>/` following the structure of an existing skill
-5. Include `SKILL.md`, at least one reference doc, and any scripts your skill needs
-6. Submit a PR
+Skills now live in [**AQaddora/pure-skill-suite**](https://github.com/AQaddora/pure-skill-suite). To propose a new skill or improve an existing one:
+
+1. Open an issue / PR **on pure-skill-suite**, not here
+2. Follow the skill structure documented in that repo's README
+3. The course's `./install.sh` shim picks up your change automatically once it merges to `pure-skill-suite/main`
+
+Issues opened here for skill bugs will be redirected — saves time to post in the right repo first.
 
 ## Code style
 

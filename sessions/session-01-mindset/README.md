@@ -38,7 +38,7 @@ By the end of this session you'll know which "camp" you're in (Tab Tapper, Promp
 1. Watch the recording (link will go here after publication)
 2. Read [`practical.md`](public/practical.md) and try the PURE Loop on a real task this week
 3. Complete [`assignment.md`](public/assignment.md) — 60 minutes
-4. Install the AI Doctrine system: `./skills/install.sh` from the repo root
+4. Install the AI Doctrine system: `./install.sh` from the repo root (clones [pure-skill-suite](https://github.com/AQaddora/pure-skill-suite) + runs its installer)
 5. Continue to Session 2 when it's published
 
 ### As a producer
@@ -46,4 +46,4 @@ The production team uses the private repo for scripts and teleprompter copy. Acc
 
 ---
 
-[← Back to all sessions](../README.md) · [Skills](../../skills/README.md) · [Templates](../../templates/README.md)
+[← Back to all sessions](../README.md) · [Skills (pure-skill-suite)](https://github.com/AQaddora/pure-skill-suite) · [Templates](../../templates/README.md)

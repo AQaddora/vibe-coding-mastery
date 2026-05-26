@@ -31,12 +31,14 @@ The framework is invented and battle-tested in production. The skills are open s
 ```bash
 git clone https://github.com/AQaddora/vibe-coding-mastery.git
 cd vibe-coding-mastery
-./skills/install.sh
+./install.sh
 ```
+
+`./install.sh` is a shim that clones the [PURE Skill Suite](https://github.com/AQaddora/pure-skill-suite) as a sibling directory (skills live in their own repo so they can ship independently of the courseware) and runs its installer. One command, end-to-end.
 
 **Windows:** the installer runs on Git Bash, WSL2, or as a PowerShell-only fallback. Full step-by-step in [`docs/install.md`](docs/install.md).
 
-The installer creates `~/ai-doctrine.md`, installs all 7 skills into `~/.claude/skills/`, and (optionally) wires the doctrine into your current project so every AI tool reads the same memory.
+The installer creates `~/ai-doctrine.md`, installs all 8 skills into `~/.claude/skills/`, and (optionally) wires the doctrine into your current project so every AI tool reads the same memory.
 
 Once installed, open Claude and try one of:
 
@@ -60,20 +62,22 @@ Open Cursor or Copilot in the same project — they pick up the same rules autom
 
 All five sessions are **free**. Slides, practical walkthroughs, assignments, references — everything ships here as it's produced. More advanced tiers (deeper builds, full-stack AI products, monetization) will follow under the same Vibe Coding Mastery program.
 
-## The 8 skills
+## The 8 skills (in a separate repo)
 
-| # | Skill | What it does | Install path |
-| --- | --- | --- | --- |
-| 1 | [`doctrine-keeper`](skills/doctrine-keeper/SKILL.md) | The memory bus — captures every rule to `~/ai-doctrine.md` | `./skills/install.sh` |
-| 2 | [`prime`](skills/prime/SKILL.md) | Builds the primer that loads before any real task | `./skills/install.sh` |
-| 3 | [`understand`](skills/understand/SKILL.md) | Clarifies scope before code is written | `./skills/install.sh` |
-| 4 | [`refine`](skills/refine/SKILL.md) | Senior-reviewer self-review on AI output | `./skills/install.sh` |
-| 5 | [`execute`](skills/execute/SKILL.md) | Delegates work to a coding agent, tracks the run | `./skills/install.sh` |
-| 6 | [`organize-agents`](skills/organize-agents/SKILL.md) | Registry of agent runs across every tool | `./skills/install.sh` |
-| 7 | [`pure-orchestrator`](skills/pure-orchestrator/SKILL.md) | Runs the full P→U→R→E loop with checkpoints | `./skills/install.sh` |
-| 8 | [`handoff`](skills/handoff/SKILL.md) | Migrates a long session to a fresh chat without losing state | `./skills/install.sh` |
+The skills live in [**AQaddora/pure-skill-suite**](https://github.com/AQaddora/pure-skill-suite) so they can be installed and consumed independently of this courseware:
 
-All 8 are MIT licensed. The orchestrator pulls in the others.
+| # | Skill | What it does |
+| --- | --- | --- |
+| 1 | [`doctrine-keeper`](https://github.com/AQaddora/pure-skill-suite#doctrine-keeper) | The memory bus — captures every rule to `~/ai-doctrine.md` |
+| 2 | [`prime`](https://github.com/AQaddora/pure-skill-suite#prime) | Builds the primer that loads before any real task |
+| 3 | [`understand`](https://github.com/AQaddora/pure-skill-suite#understand) | Clarifies scope before code is written |
+| 4 | [`refine`](https://github.com/AQaddora/pure-skill-suite#refine) | Senior-reviewer self-review on AI output |
+| 5 | [`execute`](https://github.com/AQaddora/pure-skill-suite#execute) | Delegates work to a coding agent, tracks the run |
+| 6 | [`organize-agents`](https://github.com/AQaddora/pure-skill-suite#organize-agents) | Registry of agent runs across every tool |
+| 7 | [`pure-orchestrator`](https://github.com/AQaddora/pure-skill-suite#pure-orchestrator) | Runs the full P→U→R→E loop with checkpoints |
+| 8 | [`handoff`](https://github.com/AQaddora/pure-skill-suite#project-handoff) | Migrates a long session to a fresh chat without losing state |
+
+All 8 are MIT licensed. The orchestrator pulls in the others. `./install.sh` in this repo clones the suite and runs its installer — you don't have to clone both manually.
 
 ## Cross-tool memory — how it works
 
@@ -108,32 +112,24 @@ This is the **invention** at the heart of this repo, and the reason it's not jus
 ```
 vibe-coding-mastery/
 ├── README.md                  ← you are here
-├── LICENSE                    ← MIT for skills, ARR for course content
+├── LICENSE                    ← course content terms
 ├── CONTRIBUTING.md
+├── install.sh                 ← shim — clones pure-skill-suite + runs its installer
 │
-├── sessions/                  ← course material
+├── sessions/                  ← course material (5 sessions, free)
 │   ├── session-01-mindset/    ← ✅ Free lead magnet
 │   ├── session-02-defense/    ← ⏳ paid pre-course
 │   ├── session-03-mvp/        ← ⏳ paid pre-course
 │   ├── session-04-saas/       ← ⏳ paid pre-course
 │   └── session-05-career/     ← ⏳ paid pre-course
 │
-├── skills/                    ← the 8 PURE + AI Doctrine skills (MIT)
-│   ├── install.sh             ← one-shot installer
-│   ├── doctrine-keeper/
-│   ├── prime/
-│   ├── understand/
-│   ├── refine/
-│   ├── execute/
-│   ├── organize-agents/
-│   ├── pure-orchestrator/
-│   └── handoff/
-│
-├── templates/                 ← per-tool config templates (CLAUDE.md, etc.)
-├── tools/                     ← session scaffolders + slide build helpers
+├── templates/                 ← per-tool config templates (CLAUDE.md, etc.) — MIT
+├── tools/                     ← session scaffolders + slide build helpers — MIT
 ├── docs/                      ← extended docs (pricing, FAQ, changelog)
 └── .github/                   ← issue templates + CI
 ```
+
+The 8 skills live separately in [**AQaddora/pure-skill-suite**](https://github.com/AQaddora/pure-skill-suite) — install via `./install.sh` above, which clones the suite as a sibling directory and runs its installer.
 
 Private course materials (speaker scripts, teleprompter copy, role notes) live in a separate private repo: `github.com/AQaddora/vibe-coding-mastery-private`.
 
@@ -153,7 +149,8 @@ Connect:
 
 | What | License |
 | --- | --- |
-| Everything in `skills/`, `templates/`, `tools/`, `.github/` | **MIT** — use, fork, build on |
+| Everything in `templates/`, `tools/`, `.github/`, plus `install.sh` | **MIT** — use, fork, build on |
+| The 8 skills (in [`pure-skill-suite`](https://github.com/AQaddora/pure-skill-suite)) | **MIT** — separate repo, separate distribution |
 | Everything in `sessions/`, `docs/` | **Free to learn from. Copyright Ahmed Qaddoura — do not republish or repackage.** |
 | The **PURE Loop** and **AI Doctrine** framework names | Credit when referencing — they're Ahmed's invention |
 

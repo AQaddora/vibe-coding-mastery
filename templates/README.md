@@ -2,7 +2,7 @@
 
 Per-tool configuration templates that wire your `~/ai-doctrine.md` into every AI coding tool you use.
 
-You don't usually need to copy these by hand — `skills/install.sh` (or `skills/doctrine-keeper/scripts/sync_to_agents.sh`) handles it. These files exist so you can read them, understand what gets installed, and customize them before deploying to a project.
+You don't usually need to copy these by hand — the [pure-skill-suite](https://github.com/AQaddora/pure-skill-suite) installer (run from this repo via `./install.sh`, or directly via its own `skills/install.sh`) wires them up. These files exist so you can read them, understand what gets installed, and customize them before deploying to a project.
 
 ## What's here
 
@@ -53,4 +53,4 @@ For solo work, symlinks are faster (rules update everywhere when you save a new 
 
 ---
 
-[← Skills](../skills/README.md) · [Repo root](../README.md)
+[← Skills (pure-skill-suite)](https://github.com/AQaddora/pure-skill-suite) · [Repo root](../README.md)

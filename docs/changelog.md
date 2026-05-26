@@ -4,6 +4,51 @@ All notable changes to the Vibe Coding Mastery repo, skill suite, and course mat
 
 The format roughly follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versions are dated rather than numbered — this is a living curriculum, not a product release.
 
+## 2026-05-27 — Skills extracted to their own repo
+
+### Changed
+
+- The 8 PURE + AI Doctrine skills now live in their own dedicated repo:
+  [**AQaddora/pure-skill-suite**](https://github.com/AQaddora/pure-skill-suite).
+  This course repo no longer duplicates the skill source — it ships an
+  `install.sh` shim at the root that clones `pure-skill-suite` as a sibling
+  directory and delegates to its installer.
+- Quick-start command changed from `./skills/install.sh` to `./install.sh`.
+- README, docs/install.md, docs/faq.md, docs/index.md, and CONTRIBUTING.md
+  updated to reflect the split.
+
+### Removed
+
+- `skills/` directory deleted from this repo (entire content moved to
+  the suite repo).
+- `LICENSE` no longer lists `skills/` under the MIT section (it's now
+  MIT-licensed in the suite repo, which carries its own LICENSE).
+
+### Why
+
+The skills and the courseware were always two products in one repo:
+the skills are a tool you install and use daily across every codebase;
+the courseware is content you read once and apply. Bundling them meant
+every skill update required a course-repo commit, and external users
+who only wanted the skills had to clone the entire course (with all
+its session material) just to run the installer. The split gives both
+products clean ownership: the suite ships independently, the course
+references it.
+
+### Migration for existing users
+
+If you previously cloned `vibe-coding-mastery` and ran `./skills/install.sh`:
+
+```bash
+cd ~/vibe-coding-mastery
+git pull
+./install.sh                # clones pure-skill-suite alongside, idempotent re-install
+```
+
+Your existing `~/ai-doctrine.md` and `~/.claude/skills/*` are preserved.
+The installer re-points the symlinks to `~/pure-skill-suite/skills/<name>/`
+on this run.
+
 ## 2026-05-14 — Series naming locked: "Vibe Coding Mastery — Mindset Foundations"
 
 ### Added

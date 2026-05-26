@@ -6,7 +6,7 @@
 
 **P**rime → **U**nderstand → **R**efine → **E**xecute. A four-phase protocol for running any task through AI coding tools. The phases enforce the discipline that turns AI from autocomplete into a real pair: load context first, clarify scope second, review before generating, then delegate cleanly with verification.
 
-See [`skills/pure-orchestrator/SKILL.md`](../skills/pure-orchestrator/SKILL.md) for the full protocol.
+See [`pure-orchestrator`](https://github.com/AQaddora/pure-skill-suite#pure-orchestrator) in the skill suite for the full protocol.
 
 ### What is the AI Doctrine?
 
@@ -72,15 +72,15 @@ No. The skills install into `~/.claude/skills/` which is read by claude.ai's web
 
 ### Can I customize a skill?
 
-Yes — MIT license. Fork the repo, modify `SKILL.md`, reinstall with `./skills/install.sh`. Or open a PR if you think your change should be upstream.
+Yes — MIT license. Fork [`pure-skill-suite`](https://github.com/AQaddora/pure-skill-suite), modify the relevant `SKILL.md`, point this repo's `./install.sh` at your fork via `SUITE_DIR=...`. Or open a PR on `pure-skill-suite` if you think your change should be upstream.
 
 ### Can I add my own skills?
 
-Yes. Add a folder under `skills/`, follow the structure of an existing skill (`SKILL.md` + `references/` + `scripts/`), and your skill will be picked up by `install.sh` automatically.
+Yes. Open `pure-skill-suite`, add a folder under `skills/`, follow the structure of an existing skill (`SKILL.md` + `references/` + `scripts/`), and your skill will be picked up by `install.sh` automatically.
 
 ### What if I don't want all 8 skills?
 
-Run `./skills/install.sh`, then `rm -rf ~/.claude/skills/<skill-name>` for any you don't want. The orchestrator works best with all 8 but each skill can be used standalone.
+Run `./install.sh`, then `rm -rf ~/.claude/skills/<skill-name>` for any you don't want. The orchestrator works best with all 8 but each skill can be used standalone.
 
 ## Privacy & licensing
 

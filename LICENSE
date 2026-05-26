@@ -4,14 +4,18 @@ Vibe Coding Mastery — Mixed License
 This repository contains two categories of content with different licenses.
 
 ────────────────────────────────────────────────────────────────────────
-1. SKILLS, TEMPLATES, TOOLS, AND CODE  →  MIT License
+1. TEMPLATES, TOOLS, INSTALL SHIM, AND CODE  →  MIT License
 ────────────────────────────────────────────────────────────────────────
 
-The following directories are licensed under the MIT License:
-  - skills/
+The following directories and files are licensed under the MIT License:
   - templates/
   - tools/
   - .github/
+  - install.sh
+
+NOTE: The PURE skill suite, formerly distributed under skills/ in this
+repo, now lives at https://github.com/AQaddora/pure-skill-suite (also
+MIT). The install.sh shim here clones that repo and runs its installer.
 
 MIT License
 
