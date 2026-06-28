@@ -1,0 +1,42 @@
+# OS Push Sync — fires on every push, dispatches to aqaddoura-os for the full sweep.
+# Requires repo secret: OS_REPORT_TOKEN (fine-grained PAT, contents:write on AQaddora/aqaddoura-os)
+name: OS Push Sync
+
+on:
+  push:
+    branches: ['**']
+  workflow_dispatch:
+
+jobs:
+  dispatch-to-os:
+    name: Dispatch push to aqaddoura-os
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send worktree-push event to aqaddoura-os
+        run: |
+          COMMIT_MSG=$(echo '${{ github.event.head_commit.message }}' | head -1 | tr -d '"\\')
+          PAYLOAD=$(python3 -c "
+          import json
+          print(json.dumps({
+            'event_type': 'worktree-push',
+            'client_payload': {
+              'repo':           '${{ github.repository }}',
+              'branch':         '${{ github.ref_name }}',
+              'commit':         '${{ github.sha }}',
+              'commit_message': '${COMMIT_MSG}',
+              'pusher':         '${{ github.actor }}',
+            }
+          }))
+          ")
+          HTTP=$(curl -sS -o /tmp/dispatch_resp.json -w "%{http_code}" \
+            -X POST \
+            -H "Authorization: token ${{ secrets.OS_REPORT_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            -d "$PAYLOAD" \
+            "https://api.github.com/repos/AQaddora/aqaddoura-os/dispatches")
+          if [[ "$HTTP" =~ ^2 ]]; then
+            echo "Dispatched to aqaddoura-os (HTTP $HTTP)"
+          else
+            echo "::warning::Dispatch HTTP $HTTP"
+            cat /tmp/dispatch_resp.json || true
+          fi
