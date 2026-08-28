@@ -12,31 +12,45 @@ jobs:
     name: Dispatch push to aqaddoura-os
     runs-on: ubuntu-latest
     steps:
+      # Everything from the event goes in through the ENVIRONMENT, never through
+      # ${{ }} interpolation into the script body. Pasting a commit message into
+      # shell source is both fragile and unsafe: a single apostrophe ("the post's
+      # body") ended the quoted string and failed the job with a syntax error,
+      # and a crafted message could have run arbitrary commands on the runner.
+      # The quoted heredoc below means the shell expands nothing at all.
       - name: Send worktree-push event to aqaddoura-os
+        env:
+          COMMIT_MSG: ${{ github.event.head_commit.message }}
+          SRC_REPO: ${{ github.repository }}
+          SRC_BRANCH: ${{ github.ref_name }}
+          SRC_SHA: ${{ github.sha }}
+          SRC_ACTOR: ${{ github.actor }}
+          OS_REPORT_TOKEN: ${{ secrets.OS_REPORT_TOKEN }}
         run: |
-          COMMIT_MSG=$(echo '${{ github.event.head_commit.message }}' | head -1 | tr -d '"\\')
-          PAYLOAD=$(python3 -c "
-          import json
+          PAYLOAD=$(python3 <<'PY'
+          import json, os
+          lines = os.environ.get('COMMIT_MSG', '').splitlines()
           print(json.dumps({
             'event_type': 'worktree-push',
             'client_payload': {
-              'repo':           '${{ github.repository }}',
-              'branch':         '${{ github.ref_name }}',
-              'commit':         '${{ github.sha }}',
-              'commit_message': '${COMMIT_MSG}',
-              'pusher':         '${{ github.actor }}',
+              'repo':           os.environ.get('SRC_REPO', ''),
+              'branch':         os.environ.get('SRC_BRANCH', ''),
+              'commit':         os.environ.get('SRC_SHA', ''),
+              'commit_message': lines[0] if lines else '',
+              'pusher':         os.environ.get('SRC_ACTOR', ''),
             }
           }))
-          ")
+          PY
+          )
           HTTP=$(curl -sS -o /tmp/dispatch_resp.json -w "%{http_code}" \
             -X POST \
-            -H "Authorization: token ${{ secrets.OS_REPORT_TOKEN }}" \
+            -H "Authorization: token $OS_REPORT_TOKEN" \
             -H "Accept: application/vnd.github+json" \
             -d "$PAYLOAD" \
             "https://api.github.com/repos/AQaddora/aqaddoura-os/dispatches")
           if [[ "$HTTP" =~ ^2 ]]; then
             echo "Dispatched to aqaddoura-os (HTTP $HTTP)"
           else
-            echo "::warning::Dispatch HTTP $HTTP"
+            echo "::warning::Dispatch HTTP $HTTP — set OS_REPORT_TOKEN secret in this repo"
             cat /tmp/dispatch_resp.json || true
           fi
