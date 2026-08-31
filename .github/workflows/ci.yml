@@ -5,66 +5,53 @@ on:
     branches: [main, dev]
   pull_request:
     branches: [main]
+  workflow_dispatch:
+
+# Public repo: self-hosted runners must never execute untrusted fork-PR code.
+# Every job below is gated so it runs only for pushes, workflow_dispatch, and
+# same-repo pull requests — fork PRs are skipped (they would otherwise run on
+# the fleet runner). See CI EXODUS runbook §3.
 
 jobs:
   lint:
     name: Lint shell and python
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, qa]
+    if: >-
+      github.event_name != 'pull_request' ||
+      github.event.pull_request.head.repo.full_name == github.repository
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install shellcheck
-        run: sudo apt-get update -qq && sudo apt-get install -y shellcheck
-
+      # shellcheck + ruff are installed system-wide on the fleet runner.
       - name: Run shellcheck on all .sh files
         run: |
-          find skills tools -name '*.sh' -print0 | \
+          find . -name '*.sh' -not -path './.git/*' -print0 | \
             xargs -0 -r shellcheck --severity=warning --shell=bash
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Install ruff
-        run: pip install ruff
-
+      # skills/ was extracted to AQaddora/pure-skill-suite (commit 47e347f); this
+      # repo currently ships no Python, so ruff lints the whole tree and passes
+      # cleanly while staying meaningful if Python returns.
       - name: Run ruff
-        run: ruff check skills/
+        run: ruff check .
 
   structure:
     name: Verify repo structure
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, qa]
+    if: >-
+      github.event_name != 'pull_request' ||
+      github.event.pull_request.head.repo.full_name == github.repository
     steps:
       - uses: actions/checkout@v4
 
-      - name: All 8 skills present
+      - name: Expected top-level directories present
         run: |
-          for skill in doctrine-keeper prime understand refine execute organize-agents pure-orchestrator handoff; do
-            if [[ ! -f "skills/$skill/SKILL.md" ]]; then
-              echo "Missing skill: $skill"
+          for dir in sessions templates tools docs; do
+            if [[ ! -d "$dir" ]]; then
+              echo "Missing expected directory: $dir"
               exit 1
             fi
           done
-          echo "All 8 skills present."
-
-      - name: Verify YAML frontmatter on every SKILL.md
-        run: |
-          for skill in skills/*/SKILL.md; do
-            if ! head -1 "$skill" | grep -q '^---$'; then
-              echo "Missing YAML frontmatter: $skill"
-              exit 1
-            fi
-            if ! grep -q '^name:' "$skill"; then
-              echo "Missing 'name:' field: $skill"
-              exit 1
-            fi
-            if ! grep -q '^description:' "$skill"; then
-              echo "Missing 'description:' field: $skill"
-              exit 1
-            fi
-          done
-          echo "Frontmatter valid on every skill."
+          echo "Top-level structure OK."
 
       - name: Verify no private session files committed
         run: |

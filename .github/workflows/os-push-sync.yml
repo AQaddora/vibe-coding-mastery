@@ -10,7 +10,7 @@ on:
 jobs:
   dispatch-to-os:
     name: Dispatch push to aqaddoura-os
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, qa]
     steps:
       # Everything from the event goes in through the ENVIRONMENT, never through
       # ${{ }} interpolation into the script body. Pasting a commit message into
